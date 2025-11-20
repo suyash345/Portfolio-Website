@@ -102,15 +102,31 @@
         </section>
 
         <iframe 
-            src="web/index.html" 
+            src="web/Pong/snake.html" 
             width="800" 
             height="600" 
             style="border:none;">
         </iframe>
 
         
-        <!-- Contact -->
-        <section></section>
+        <iframe 
+            src="web/Sand/index.html" 
+            width="800" 
+            height="600" 
+            style="border:none;">
+        </iframe>
+
+        <script>
+        const pongIframe = document.querySelector('iframe[src="web/Pong/snake.html"]');
+
+        pongIframe.addEventListener('mouseenter', () => {
+            pongIframe.contentWindow.focus();
+        });
+
+        pongIframe.addEventListener('click', () => {
+            pongIframe.contentWindow.focus();
+        });
+        </script>
 
      </main>
 </body>
