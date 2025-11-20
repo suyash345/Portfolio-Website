@@ -101,32 +101,22 @@
             </div>
         </section>
 
-        <iframe 
-            src="web/Pong/index.html" 
-            width="800" 
-            height="600" 
-            style="border:none;">
-        </iframe>
 
-        
-        <iframe 
-            src="web/Sand/index.html" 
-            width="800" 
-            height="600" 
-            style="border:none;">
-        </iframe>
+        <div class="games">
+            <iframe src="web/Pong/index.html" id="pongGame" allowfullscreen allow="fullscreen"></iframe>
+            <iframe src="web/Sand/index.html" id="sandGame" allowfullscreen allow="fullscreen"></iframe>
+        </div>
 
-        <script>
-        const pongIframe = document.querySelector('iframe[src="web/Pong/index.html"]');
+    <script>
+        const pongIframe = document.getElementById('pongGame');
+        const sandIframe = document.getElementById('sandGame');
 
-        pongIframe.addEventListener('mouseenter', () => {
-            pongIframe.contentWindow.focus();
+        // Focus on hover or click
+        [pongIframe, sandIframe].forEach(iframe => {
+            iframe.addEventListener('mouseenter', () => iframe.contentWindow.focus());
+            iframe.addEventListener('click', () => iframe.contentWindow.focus());
         });
-
-        pongIframe.addEventListener('click', () => {
-            pongIframe.contentWindow.focus();
-        });
-        </script>
+    </script>
 
      </main>
 </body>
