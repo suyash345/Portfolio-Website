@@ -1,6 +1,6 @@
 :root{
     --text-color : #1a1c20;
-    --link-color: #4a76ee;
+    --link-color: #26B99A;
     --background-color: #eeeff1;
 }
 
@@ -24,6 +24,23 @@ body {
 a {
     color: var(--link-color);
     text-decoration: none;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+
+span {
+    color: var(--link-color);
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+span:hover {
+    color: #14A085;  /* subtle hover effect */
+    cursor: pointer;
 }
 
 /* NAVBAR */
@@ -58,54 +75,77 @@ nav .right a span {
     margin-left: 5px;
 }
 
-/* SECTION 1 HERO*/
+/* HERO SECTION */
 .hero-section {
     display: flex;
-    justify-self: space-between;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
-    margin: 50px 0;
+    padding: 50px;
     margin-bottom: 100px;
-gap: 40px;}
+    gap: 40px;
+    background-color: #f7f8fa; /* subtle background for hero */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
 
-hero-section .text {
-flex: 5;}
+.hero-section .text {
+    flex: 1 1 500px;
+}
 
-.her-section .text h2{
-font-size: 45px;}
-hero-section .text .links{
-    margin-top: 25px;
+.hero-section .text h2 {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.hero-section .text h2 span {
+    color: var(--link-color); /* highlight name */
+}
+
+.hero-section .text p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
 }
 
 .hero-section .text .links a {
     display: inline-block;
-    padding: 5px 10px;
+    padding: 10px 20px;
+    font-weight: 500;
     border: 2px solid var(--link-color);
-    border-radius: 5px;
+    border-radius: 8px;
     margin-right: 10px;
     margin-bottom: 10px;
-    transition: 0.1s;
+    transition: all 0.2s ease;
 }
 
 .hero-section .text .links a:hover {
-    color: var(--text-color);
-    border: 2px soild var(--text-color); 
+    background-color: var(--link-color);
+    color: var(--background-color);
+    transform: translateY(-2px);
 }
 
 .hero-section .headshot {
-    flex: 2;
+    flex: 0 0 350px;
     display: flex;
-    justify-content: right;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-section .headshot img {
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     border-radius: 50%;
-
+    border: 4px solid var(--link-color);
 }
 
-/* Section 2 Skills */
-.skills-section{
+
+
+/* SKILLS SECTION */
+.skills-section {
     padding: 0 50px;
     margin-bottom: 100px;
 }
@@ -113,38 +153,58 @@ hero-section .text .links{
 .skills-section h2 {
     text-align: center;
     font-size: 35px;
+    margin-bottom: 1rem;
 }
 
-.skills-section .text {
+.skills-intro {
+    max-width: 800px;
+    margin: 0 auto 3rem;
     text-align: center;
+    color: #555;
+}
+
+/* Grid Layout */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+/* Skill Cards */
+.skill-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.skill-card h3 {
+    margin-bottom: 1rem;
     font-size: 20px;
+    color: var(--text-color);
 }
 
-.skills-section .cells {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.skill-card ul {
+    list-style: none;
+    padding-left: 0;
 }
 
-.skills-section .cells .cell {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-gap: 10px;
-
-width: 200px;
-padding: 10px 20px;
-margin: 10px;
-    bordr: 1.5px solid #d3d3d3;
-    border-radius: 5px;
-}.skills-section .cells .cell span {
-font-size: 18px;}
-skills-section .cells .cell img {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
-    border-radius: 2px;
+.skill-card li {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 15px;
 }
+
+.skill-card li:last-child {
+    border-bottom: none;
+}
+
 
 /*Section 3 Tesimony*/
 .testimony-section {
@@ -183,6 +243,76 @@ testimony-section .group .text .img{
 
 .testimony-section .group .person_details p:last-child {
     font-weight: normal;
+}
+/* EXPERIENCE & PROJECTS SECTION */
+.experience-section, .projects-section {
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto 100px;
+}
+
+.experience-section h2, .projects-section h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.experience-cards, .projects-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Experience cards styling to match skill and project cards */
+.experience-card {
+    background: #ffffff;         /* same as skill-card */
+    border: 1px solid #e0e0e0;  /* same as skill-card */
+    border-radius: 10px;         /* match skill-card */
+    padding: 1.5rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-4px); /* match skill-card hover */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.experience-card h3 {
+    margin-bottom: 1rem;
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+.experience-card p {
+    padding: 0.4rem 0;
+    font-size: 15px;
+    color: #555;
+}
+
+/* Match project cards to skills card style */
+.project-card {
+    background: #ffffff;         /* same as skill-card */
+    border: 1px solid #e0e0e0;  /* same as skill-card */
+    border-radius: 10px;         /* match skill-card */
+    padding: 1.5rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px); /* match skill-card hover */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.project-card h3 {
+    margin-bottom: 1rem;
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+.project-card p {
+    padding: 0.4rem 0;
+    font-size: 15px;
+    color: #555;
 }
 
 
@@ -264,4 +394,65 @@ testimony-section .group .text .img{
     height: 1200px;        /* default height */
     border: none;
     aspect-ratio: 4/3;    /* maintains game aspect ratio */
+}
+
+
+.game-section {
+    display: flex;
+    gap: 2rem;
+    margin: 3rem auto;
+    max-width: 1200px;
+    padding: 1.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #fafafa;
+}
+
+.game-container iframe {
+    width: 800px;
+    height: 900px;
+    border: none;
+    border-radius: 8px;
+}
+
+.game-info {
+    flex: 1;
+}
+
+.game-info h2 {
+    margin-top: 0;
+}
+
+.game-info h3 {
+    margin-bottom: 0.3rem;
+}
+
+.game-info ul {
+    padding-left: 1.2rem;
+}
+
+.game-info li {
+    margin-bottom: 0.4rem;
+}
+
+.description {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+/* Responsive layout */
+@media (max-width: 1000px) {
+    .game-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .game-container iframe {
+        width: 100%;
+        height: 500px;
+    }
+
+    .game-info {
+        width: 100%;
+    }
 }
