@@ -1,250 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Suyash Khanna — Graduate Software Engineer. C++ systems, performance, backend, and applied ML." />
 
-    <title>Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
+  <title>Suyash Khanna | Portfolio</title>
 </head>
+
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<nav>
-    <div class="left">
-        <a href="/">Suyash Khanna</a>
-    </div>
-    <div class="right">  
-        <a href="https://github.com/suyash345" target="_blank">
-            <i class="fa-brands fa-github"></i> GitHub
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="#top">Suyash Khanna</a>
+
+      <div class="nav-links">
+        <a href="https://github.com/suyash345" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span>
         </a>
-        <a href="https://www.linkedin.com/in/suyash-khanna-0865a31b4/" target="_blank">
-            <i class="fa-brands fa-linkedin"></i>LinkedIn
+
+        <a href="https://www.linkedin.com/in/suyash-khanna-0865a31b4/" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span>
         </a>
+
         <a href="mailto:suyashkhanna345@gmail.com">
-            <i class="fa-regular fa-envelope"></i>Email
+          <i class="fa-regular fa-envelope" aria-hidden="true"></i><span>Email</span>
         </a>
-        <a href="resume.pdf" target="_blank" rel="noopener noreferrer">
-            <i class="fa-solid fa-file">
-        </i> Resume
-</a>
-    </div>
-</nav>
 
-<main>
+        <a class="pill" href="resume.pdf" target="_blank" rel="noopener noreferrer">
+          <i class="fa-solid fa-file" aria-hidden="true"></i><span>Resume</span>
+        </a>
+      </div>
+    </nav>
+  </header>
 
-<section class="hero-section">
-    <div class="text">
-        <h2>Hi, I'm <span>Suyash</span></h2>
-        <p>
-            I am a Graduate Software Engineer at BAE Systems with a strong background in
-            systems programming, performance optimization, and AI research.
-            I hold a Bachelor of Computer Science from the University of Adelaide and am
-            currently pursuing an Honours degree in Computer Science at the University of
-            New South Wales. My interests span high-performance C++ systems, backend
-            architecture, and applied machine learning.
+  <main id="main">
+    <!-- HERO -->
+    <section class="section container hero" id="top">
+      <div class="hero-text">
+        <h1>Suyash's <span class="accent">Portfolio</span></h1>
+
+        <p class="muted">
+          Graduate Software Engineer at BAE Systems focused on systems programming, performance optimization,
+          and backend architecture. I’m completing Honours (CS) at UNSW.
         </p>
-        <div class="links">
-            <a href="#skills">See My Skills</a>
-            <a href="#projects">Projects</a>
+
+        <ul class="hero-bullets">
+          <li>Modern C++ (C++17), Linux workflows, profiling & performance</li>
+          <li>Backend systems + automation (Python, concurrency)</li>
+          <li>Applied ML research experience</li>
+        </ul>
+
+        <div class="hero-cta">
+          <a class="btn" href="#projects">Projects</a>
+          <a class="btn btn-ghost" href="#skills">Skills</a>
         </div>
-    </div>
+      </div>
 
-    <div class="headshot">
-        <img src="photo.JPG" alt="Suyash Khanna">
-    </div>
-</section>
+      <div class="hero-media">
+        <img src="photo.JPG" alt="Portrait photo of Suyash Khanna" loading="lazy" />
+      </div>
+    </section>
 
-<section id="skills" class="skills-section">
-    <h2><span>Skills</span></h2>
+    <!-- SKILLS -->
+    <section class="section container" id="skills">
+      <h2 class="section-title"><span class="accent">Skills</span></h2>
+      <p class="section-subtitle muted">
+        Performance-critical systems, backend software, and modern tooling across C++, Python, and Linux.
+      </p>
 
-    <p class="skills-intro">
-        I work primarily on performance-critical systems and backend software, with
-        strong experience across modern C++, Python, and Linux-based development
-        workflows.
-    </p>
+      <div class="grid">
+        <article class="card">
+          <h3>Languages</h3>
+          <ul class="list">
+            <li>C++ (C++17)</li>
+            <li>Python</li>
+            <li>C</li>
+            <li>JavaScript</li>
+          </ul>
+        </article>
 
-    <div class="skills-grid">
-        <div class="skill-card">
-            <h3>Languages</h3>
-            <ul>
-                <li>C++ (C++17)</li>
-                <li>Python</li>
-                <li>C</li>
-                <li>JavaScript</li>
-            </ul>
-        </div>
+        <article class="card">
+          <h3>Systems & Backend</h3>
+          <ul class="list">
+            <li>Multithreading & Concurrency</li>
+            <li>Performance Profiling</li>
+            <li>Memory Optimization</li>
+            <li>Backend Architecture</li>
+          </ul>
+        </article>
 
-        <div class="skill-card">
-            <h3>Systems & Backend</h3>
-            <ul>
-                <li>Multithreading & Concurrency</li>
-                <li>Performance Profiling</li>
-                <li>Memory Optimization</li>
-                <li>Backend Architecture</li>
-            </ul>
-        </div>
+        <article class="card">
+          <h3>Tools & Platforms</h3>
+          <ul class="list">
+            <li>Linux</li>
+            <li>Git & GitHub</li>
+            <li>CMake</li>
+            <li>Docker</li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
-        <div class="skill-card">
-            <h3>Tools & Platforms</h3>
-            <ul>
-                <li>Linux</li>
-                <li>Git & GitHub</li>
-                <li>CMake</li>
-                <li>Docker</li>
-            </ul>
-        </div>
-    </div>
-</section>
+    <!-- EXPERIENCE -->
+    <section class="section container" id="experience">
+      <h2 class="section-title"><span class="accent">Experience</span></h2>
 
-
-<!-- EXPERIENCE SECTION -->
-<section id="experience" class="experience-section">
-    <h2><span>Experience</span></h2>
-    <div class="experience-cards">
-        <div class="experience-card">
+      <div class="grid">
+        <article class="card">
+          <header class="card-header">
             <h3>BAE Systems — Graduate Software Engineer</h3>
-            <h5>2023-current</h5>
-            <p>
-                Refactored internal automation tooling by migrating BASH scripts to
-                multi-threaded Python, reducing execution time by over 50%.
-                Investigated C++ performance bottlenecks, identifying inefficient memory
-                access patterns and excessive CPU usage. Conducted backend framework
-                evaluations across Python, Java, and Node.js to support architectural
-                decision-making.
-            </p>
-        </div>
+            <p class="muted">2023 – Present</p>
+          </header>
+          <ul class="list">
+            <li>Migrated Bash automation to multi-threaded Python, reducing execution time by 50%+</li>
+            <li>Investigated C++ performance bottlenecks (memory access + CPU hotspots)</li>
+            <li>Evaluated backend frameworks (Python/Java/Node.js) for architecture decisions</li>
+          </ul>
+        </article>
 
-        <div class="experience-card">
+        <article class="card">
+          <header class="card-header">
             <h3>IRL CROSSING — AI Research Intern</h3>
-            <p>
-                Designed and evaluated multi-agent reinforcement learning systems using
-                Python, PyTorch, TensorFlow, and OpenAI Gym. Improved policy-gradient
-                reward functions, increasing cooperative learning efficiency by up to 25%.
-                Collaborated with interdisciplinary research teams across robotics and
-                psychology.
-            </p>
-        </div>
+          </header>
+          <ul class="list">
+            <li>Designed multi-agent RL experiments (PyTorch/TensorFlow/OpenAI Gym)</li>
+            <li>Improved policy-gradient reward shaping (up to ~25% cooperative efficiency)</li>
+            <li>Worked with robotics + psychology teams</li>
+          </ul>
+        </article>
 
-        <div class="experience-card">
+        <article class="card">
+          <header class="card-header">
             <h3>Welkin Web Solutions — Software Engineer Intern</h3>
-            <p>
-                Developed responsive front-end interfaces using HTML, CSS, JavaScript,
-                and Vue.js. Tested and optimized applications across browsers and
-                devices while assisting in database schema design for scalability.
-            </p>
+          </header>
+          <ul class="list">
+            <li>Built responsive UI (HTML/CSS/JS/Vue)</li>
+            <li>Cross-browser testing and performance improvements</li>
+            <li>Assisted with DB schema design for scalability</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section container" id="projects">
+      <h2 class="section-title"><span class="accent">Projects</span></h2>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Pong (C++ / Raylib / WebAssembly)</h3>
+          <ul class="list">
+            <li>Real-time game loop + deterministic input/physics</li>
+            <li>Compiled with Emscripten to WASM</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Sand Simulation (Python / PyGame)</h3>
+          <ul class="list">
+            <li>Particle simulation with interactive placement</li>
+            <li>Multiple materials (sand/rock/eraser)</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- GAMES -->
+    <section class="section container" aria-label="Playable demos">
+      <h2 class="section-title"><span class="accent">Demos</span></h2>
+
+      <article class="game">
+        <div class="game-frame-wrap">
+          <iframe
+            src="web/Pong/index.html"
+            class="game-frame"
+            title="Playable Pong demo"
+            loading="lazy"
+          ></iframe>
         </div>
-    </div>
-</section>
-
-<!-- PROJECTS SECTION -->
-<section id="projects" class="projects-section">
-    <h2><span>Projects</span></h2>
-    <div class="projects-cards">
-        <div class="project-card">
-            <h3>Pong Game</h3>
-                <ul>
-                <li>Implemented real-time game loop and collision handling in C++17</li>
-                <li>Compiled to WebAssembly using Emscripten</li>
-                <li>Focus on deterministic physics and input handling</li>
-                </ul>
+        <div class="game-info">
+          <h3>Pong</h3>
+          <p class="muted">Click the window to focus, then play.</p>
+          <p><strong>W / S</strong> — Move left paddle</p>
         </div>
+      </article>
 
-        <div class="project-card">
-            <h3>Sand Simulation</h3>
-            <p>
-                Built a particle-based sand simulation in PyGame. Implements mouse interaction
-                for particle placement and dynamic simulation of elements like sand and rock.
-            </p>
+      <article class="game">
+        <div class="game-frame-wrap">
+          <iframe
+            src="web/Sand/index.html"
+            class="game-frame"
+            title="Playable Sand Simulation demo"
+            loading="lazy"
+          ></iframe>
         </div>
-    </div>
-</section>
+        <div class="game-info">
+          <h3>Sand Simulation</h3>
+          <p><strong>Mouse</strong> — Draw, <strong>E</strong> Eraser, <strong>R</strong> Rock, <strong>S</strong> Sand</p>
+        </div>
+      </article>
 
+      <article class="game">
+        <div class="game-frame-wrap">
+          <iframe
+            src="web/SpaceInvaders/index.html"
+            class="game-frame"
+            title="Playable Space Invaders demo"
+            loading="lazy"
+          ></iframe>
+        </div>
+        <div class="game-info">
+          <h3>Space Invaders</h3>
+          <p><strong>A / D</strong> — Move, <strong>Space</strong> — Shoot</p>
+        </div>
+      </article>
+    </section>
 
-<!-- GAME: PONG -->
-<section class="game-section">
-    <div class="game-container">
-        <iframe src="web/Pong/index.html" class="game-frame" tabindex="0"></iframe>
-    </div>
+    <footer class="footer container">
+      <p class="muted">© <span id="year"></span> Suyash Khanna</p>
+    </footer>
+  </main>
 
-    <div class="game-info">
-        <h2><span>Pong</span></h2>
-        <p>
-            A Pong game developed in C++ using the Raylib graphics library. 
-            Please click on the window to start playing.
-        </p>
-
-        <h3>Controls</h3>
-        <ul>
-            <li><strong>W / S</strong> – Move left paddle</li>
-        </ul>
-    </div>
-</section>
-
-<!-- GAME: SAND -->
-<section class="game-section">
-    <div class="game-container">
-        <iframe src="web/Sand/index.html" class="game-frame" tabindex="0"></iframe>
-    </div>
-
-    <div class="game-info">
-        <h2><span>Sand Simulation</span></h2>
-        <p>
-            Made using PyGame. 
-        </p>
-
-        <h3>Controls</h3>
-        <ul>
-            <li><strong>Mouse Click</strong> – Place particles</li>
-            <li><strong>Mouse Drag</strong> – Draw continuously</li>
-            <li><strong>E</strong> – Eraser</li>
-            <li><strong>R</strong> – Rock</li>
-            <li><strong>S</strong> – Sand</li>
-        </ul>
-
-    </div>
-</section>
-
-
-<!-- GAME: SPACE INVADERS -->
-<section class="game-section">
-    <div class="game-container">
-        <iframe src="web/SpaceInvaders/index.html" class="game-frame" tabindex="0"></iframe>
-    </div>
-
-    <div class="game-info">
-        <h2><span>Space Invaders</span></h2>
-        <p>
-            Space Invaders built in C++ using Raylib and compiled to WebAssembly.
-            Click the window to focus, then use the controls below.
-        </p>
-
-        <h3>Controls</h3>
-        <ul>
-            <li><strong>A / D</strong> – Move</li>
-            <li><strong>Space</strong> – Shoot</li>
-        </ul>
-    </div>
-</section>
-
-
-
-</main>
-
-<script>
-  window.addEventListener("keydown", (e) => {
-    if (
-      e.code === "Space" ||
-      e.code.startsWith("Arrow")
-    ) {
-      e.preventDefault();
-    }
-  }, { passive: false });
-</script>
-
-
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
