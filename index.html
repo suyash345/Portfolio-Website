@@ -27,6 +27,10 @@
         <a href="mailto:suyashkhanna345@gmail.com">
             <i class="fa-regular fa-envelope"></i>Email
         </a>
+        <a href="resume.pdf" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-file">
+        </i> Resume
+</a>
     </div>
 </nav>
 
@@ -99,7 +103,7 @@
 
 <!-- EXPERIENCE SECTION -->
 <section id="experience" class="experience-section">
-    <h2><span>Experience<span></h2>
+    <h2><span>Experience</span></h2>
     <div class="experience-cards">
         <div class="experience-card">
             <h3>BAE Systems — Graduate Software Engineer</h3>
@@ -142,10 +146,11 @@
     <div class="projects-cards">
         <div class="project-card">
             <h3>Pong Game</h3>
-            <p>
-                Developed a Pong game in C++ using the Raylib graphics library.
-                Demonstrates understanding of real-time graphics and event-driven input.
-            </p>
+                <ul>
+                <li>Implemented real-time game loop and collision handling in C++17</li>
+                <li>Compiled to WebAssembly using Emscripten</li>
+                <li>Focus on deterministic physics and input handling</li>
+                </ul>
         </div>
 
         <div class="project-card">
@@ -162,7 +167,7 @@
 <!-- GAME: PONG -->
 <section class="game-section">
     <div class="game-container">
-        <iframe src="web/Pong/index.html" class="game-frame"></iframe>
+        <iframe src="web/Pong/index.html" class="game-frame" tabindex="0"></iframe>
     </div>
 
     <div class="game-info">
@@ -182,7 +187,7 @@
 <!-- GAME: SAND -->
 <section class="game-section">
     <div class="game-container">
-        <iframe src="web/Sand/index.html" id="sandGame"></iframe>
+        <iframe src="web/Sand/index.html" class="game-frame" tabindex="0"></iframe>
     </div>
 
     <div class="game-info">
@@ -203,6 +208,43 @@
     </div>
 </section>
 
+
+<!-- GAME: SPACE INVADERS -->
+<section class="game-section">
+    <div class="game-container">
+        <iframe src="web/SpaceInvaders/index.html" class="game-frame" tabindex="0"></iframe>
+    </div>
+
+    <div class="game-info">
+        <h2><span>Space Invaders</span></h2>
+        <p>
+            Space Invaders built in C++ using Raylib and compiled to WebAssembly.
+            Click the window to focus, then use the controls below.
+        </p>
+
+        <h3>Controls</h3>
+        <ul>
+            <li><strong>A / D</strong> – Move</li>
+            <li><strong>Space</strong> – Shoot</li>
+        </ul>
+    </div>
+</section>
+
+
+
 </main>
+
+<script>
+  window.addEventListener("keydown", (e) => {
+    if (
+      e.code === "Space" ||
+      e.code.startsWith("Arrow")
+    ) {
+      e.preventDefault();
+    }
+  }, { passive: false });
+</script>
+
+
 </body>
 </html>
