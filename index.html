@@ -152,30 +152,107 @@
     </section>
 
     <!-- PROJECTS -->
-    <section class="section container" id="projects">
-      <h2 class="section-title"><span class="accent">Projects</span></h2>
+<section class="section container" id="projects">
+  <h2 class="section-title"><span class="accent">Projects</span></h2>
+  <p class="section-subtitle muted">
+    A selection of systems + simulation work. Live demos below.
+  </p>
 
-      <div class="grid">
-        <article class="card">
-          <h3>Pong (C++ / Raylib / WebAssembly)</h3>
-          <ul class="list">
-            <li>Real-time game loop + deterministic input/physics</li>
-            <li>Compiled with Emscripten to WASM</li>
-          </ul>
-        </article>
+  <div class="grid projects-grid">
+    <!-- PONG -->
+    <article class="card project-card">
+      <header class="project-header">
+        <h3>Pong — C++ / Raylib / WebAssembly</h3>
+        <div class="chips">
+          <span class="chip">C++17</span>
+          <span class="chip">Raylib</span>
+          <span class="chip">Emscripten</span>
+          <span class="chip">WebAssembly</span>
+        </div>
+      </header>
 
-        <article class="card">
-          <h3>Sand Simulation (Python / PyGame)</h3>
-          <ul class="list">
-            <li>Particle simulation with interactive placement</li>
-            <li>Multiple materials (sand/rock/eraser)</li>
-          </ul>
-        </article>
+      <p class="muted">
+        Deterministic Pong with a fixed-timestep loop and predictable input handling. Built native-first and deployed to the web via WASM.
+      </p>
+
+      <ul class="list">
+        <li>Implemented real-time loop + collision handling with deterministic behaviour</li>
+        <li>Compiled and deployed to the browser with Emscripten</li>
+        <li>Focused on input latency and consistent physics across frame rates</li>
+      </ul>
+
+      <div class="card-actions">
+        <a class="btn btn-sm" href="#demo-pong">Live Demo</a>
+        <a class="btn btn-ghost btn-sm" href="https://github.com/suyash345/Pong-Raylib" target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
       </div>
-    </section>
+    </article>
+
+    <!-- SAND -->
+    <article class="card project-card">
+      <header class="project-header">
+        <h3>Sand Simulation — Python / PyGame</h3>
+        <div class="chips">
+          <span class="chip">Python</span>
+          <span class="chip">PyGame</span>
+          <span class="chip">Simulation</span>
+        </div>
+      </header>
+
+      <p class="muted">
+        Particle-based sandbox simulation with interactive drawing and simple material rules (sand / rock / eraser).
+      </p>
+
+      <ul class="list">
+        <li>Built a grid/particle update loop to simulate granular flow</li>
+        <li>Mouse-driven placement + continuous drawing tools</li>
+        <li>Clear control scheme and stable performance at higher particle counts</li>
+      </ul>
+
+      <div class="card-actions">
+        <a class="btn btn-sm" href="#demo-sand">Live Demo</a>
+        <a class="btn btn-ghost btn-sm" href="https://github.com/suyash345/REPO_NAME" target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
+      </div>
+    </article>
+
+    <!-- SPACE INVADERS -->
+    <article class="card project-card">
+      <header class="project-header">
+        <h3>Space Invaders — C++ / Raylib / WebAssembly</h3>
+        <div class="chips">
+          <span class="chip">C++17</span>
+          <span class="chip">Raylib</span>
+          <span class="chip">WASM</span>
+        </div>
+      </header>
+
+      <p class="muted">
+        Classic Space Invaders implemented in C++ with a clean entity/update loop and browser deployment.
+      </p>
+
+      <ul class="list">
+        <li>Designed simple entity architecture (player, bullets, invaders)</li>
+        <li>Handled collision, firing cadence, and pacing/difficulty progression</li>
+        <li>Built a WASM build pipeline for web publishing</li>
+      </ul>
+
+      <div class="card-actions">
+        <a class="btn btn-sm" href="#demo-space">Live Demo</a>
+        <a class="btn btn-ghost btn-sm" href="https://github.com/suyash345/SpaceInvaders" target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
+      </div>
+    </article>
+  </div>
+</section>
+
+
 
     <!-- GAMES -->
-    <section class="section container" aria-label="Playable demos">
+    <section class="section container container-wide" aria-label="Playable demos">
       <h2 class="section-title"><span class="accent">Demos</span></h2>
 
       <article class="game">
@@ -232,6 +309,27 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+    const isTypingTarget = (el) =>
+        el && (el.tagName === "INPUT" || el.tagName === "TEXTAREA" || el.isContentEditable);
+
+    // Ensure click focuses the iframe so keyboard goes to the game
+        document.querySelectorAll(".game-frame").forEach((frame) => {
+        frame.addEventListener("pointerdown", () => frame.focus());
+    });
+
+    window.addEventListener(
+        "keydown",
+        (e) => {
+        if (e.code !== "Space") return;
+        if (isTypingTarget(e.target)) return;
+
+        const active = document.activeElement;
+        if (active && active.classList && active.classList.contains("game-frame")) {
+            e.preventDefault(); // stop page from scrolling
+        }
+        },
+        { passive: false }
+    );
   </script>
 </body>
 </html>
