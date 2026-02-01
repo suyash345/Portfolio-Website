@@ -56,12 +56,12 @@
         <ul class="hero-bullets">
           <li>Modern C++ (C++17), Linux workflows, profiling & performance</li>
           <li>Backend systems + automation (Python, concurrency)</li>
-          <li>Applied ML research experience</li>
         </ul>
 
         <div class="hero-cta">
-          <a class="btn" href="#projects">Projects</a>
           <a class="btn btn-ghost" href="#skills">Skills</a>
+          <a class="btn btn-ghost" href="#experience">Experience</a>
+          <a class="btn" href="#projects">Projects</a>
         </div>
       </div>
 
@@ -159,6 +159,34 @@
   </p>
 
   <div class="grid projects-grid">
+    <!-- SPACE INVADERS -->
+    <article class="card project-card">
+      <header class="project-header">
+        <h3>Space Invaders — C++ / Raylib / WebAssembly</h3>
+        <div class="chips">
+          <span class="chip">C++20</span>
+          <span class="chip">Raylib</span>
+          <span class="chip">WASM</span>
+        </div>
+      </header>
+
+      <p class="muted">
+        Classic Space Invaders implemented in C++ with a clean entity/update loop and browser deployment.
+      </p>
+
+      <ul class="list">
+        <li>Designed simple entity architecture (player, bullets, invaders)</li>
+        <li>Handled collision, firing cadence, and pacing/difficulty progression</li>
+        <li>Built a WASM build pipeline for web publishing</li>
+      </ul>
+
+      <div class="card-actions">
+        <a class="btn btn-ghost btn-sm" href="https://github.com/suyash345/SpaceInvaders" target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
+      </div>
+    </article>
+    
     <!-- PONG -->
     <article class="card project-card">
       <header class="project-header">
@@ -182,69 +210,42 @@
       </ul>
 
       <div class="card-actions">
-        <a class="btn btn-sm" href="#demo-pong">Live Demo</a>
         <a class="btn btn-ghost btn-sm" href="https://github.com/suyash345/Pong-Raylib" target="_blank" rel="noopener noreferrer">
           GitHub
         </a>
       </div>
     </article>
 
-    <!-- SAND -->
-    <article class="card project-card">
-      <header class="project-header">
-        <h3>Sand Simulation — Python / PyGame</h3>
-        <div class="chips">
-          <span class="chip">Python</span>
-          <span class="chip">PyGame</span>
-          <span class="chip">Simulation</span>
-        </div>
-      </header>
-
-      <p class="muted">
-        Particle-based sandbox simulation with interactive drawing and simple material rules (sand / rock / eraser).
-      </p>
-
-      <ul class="list">
-        <li>Built a grid/particle update loop to simulate granular flow</li>
-        <li>Mouse-driven placement + continuous drawing tools</li>
-        <li>Clear control scheme and stable performance at higher particle counts</li>
-      </ul>
-
-      <div class="card-actions">
-        <a class="btn btn-ghost btn-sm" href="https://github.com/suyash345/REPO_NAME" target="_blank" rel="noopener noreferrer">
-          GitHub
-        </a>
+  <!-- NAND2TETRIS -->
+  <article class="card project-card">
+    <header class="project-header">
+      <h3>Nand2Tetris — Hardware → OS Build (HDL / ASM / Jack)</h3>
+      <div class="chips">
+        <span class="chip">HDL</span>
+        <span class="chip">Assembly</span>
+        <span class="chip">Computer Architecture</span>
       </div>
-    </article>
+    </header>
 
-    <!-- SPACE INVADERS -->
-    <article class="card project-card">
-      <header class="project-header">
-        <h3>Space Invaders — C++ / Raylib / WebAssembly</h3>
-        <div class="chips">
-          <span class="chip">C++17</span>
-          <span class="chip">Raylib</span>
-          <span class="chip">WASM</span>
-        </div>
-      </header>
+    <p class="muted">
+      Built a complete computer system from NAND gates up: logic chips, CPU, assembler, VM translator, and a simple OS + programs.
+    </p>
 
-      <p class="muted">
-        Classic Space Invaders implemented in C++ with a clean entity/update loop and browser deployment.
-      </p>
+    <ul class="list">
+      <li>Implemented core chips (Mux, ALU, registers), then a working CPU + RAM hierarchy</li>
+      <li>Wrote an assembler and VM translator (stack-based VM → Hack assembly)</li>
+      <li>Built higher-level components (basic OS services) and small programs in Jack</li>
+    </ul>
 
-      <ul class="list">
-        <li>Designed simple entity architecture (player, bullets, invaders)</li>
-        <li>Handled collision, firing cadence, and pacing/difficulty progression</li>
-        <li>Built a WASM build pipeline for web publishing</li>
-      </ul>
+    <div class="card-actions">
+      <a class="btn btn-ghost btn-sm" href="https://github.com/suyash345/REPO_NAME" target="_blank" rel="noopener noreferrer">
+        GitHub
+      </a>
+    </div>
+  </article>
 
-      <div class="card-actions">
-        <a class="btn btn-sm" href="#demo-space">Live Demo</a>
-        <a class="btn btn-ghost btn-sm" href="https://github.com/suyash345/SpaceInvaders" target="_blank" rel="noopener noreferrer">
-          GitHub
-        </a>
-      </div>
-    </article>
+
+
   </div>
 </section>
 
@@ -253,20 +254,19 @@
     <!-- GAMES -->
     <section class="section container container-wide" aria-label="Playable demos">
       <h2 class="section-title"><span class="accent">Demos</span></h2>
-
+      
       <article class="game">
         <div class="game-frame-wrap">
           <iframe
-            src="web/Pong/index.html"
+            src="web/SpaceInvaders/index.html"
             class="game-frame"
-            title="Playable Pong demo"
+            title="Playable Space Invaders demo"
             loading="lazy"
           ></iframe>
         </div>
         <div class="game-info">
-          <h3>Pong</h3>
-          <p class="muted">Click the window to focus, then play.</p>
-          <p><strong>W / S</strong> — Move left paddle</p>
+          <h3>Space Invaders - Raylib - C++</h3>
+          <p><strong>W A S D</strong> — Move, <strong>Space</strong> — Shoot</p>
         </div>
       </article>
 
@@ -280,7 +280,7 @@
           ></iframe>
         </div>
         <div class="game-info">
-          <h3>Sand Simulation</h3>
+          <h3>Sand Simulation PyGame - Python</h3>
           <p><strong>Mouse</strong> — Draw, <strong>E</strong> Eraser, <strong>R</strong> Rock, <strong>S</strong> Sand</p>
         </div>
       </article>
@@ -288,17 +288,20 @@
       <article class="game">
         <div class="game-frame-wrap">
           <iframe
-            src="web/SpaceInvaders/index.html"
+            src="web/Pong/index.html"
             class="game-frame"
-            title="Playable Space Invaders demo"
+            title="Playable Pong demo"
             loading="lazy"
           ></iframe>
         </div>
         <div class="game-info">
-          <h3>Space Invaders</h3>
-          <p><strong>A / D</strong> — Move, <strong>Space</strong> — Shoot</p>
+          <h3>Pong Raylib - C++</h3>
+          <p class="muted">Click the window to focus, then play.</p>
+          <p><strong>W / S</strong> — Move left paddle</p>
         </div>
       </article>
+
+
     </section>
 
     <footer class="footer container">
