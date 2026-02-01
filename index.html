@@ -54,9 +54,8 @@
         </p>
 
         <ul class="hero-bullets">
-          <li>Modern C++ (C++17), Linux workflows, profiling & performance</li>
+          <li>Modern C++ (C++20), Linux workflows, profiling & performance</li>
           <li>Backend systems + automation (Python, concurrency)</li>
-          <li>Applied ML research experience</li>
         </ul>
 
         <div class="hero-cta">
@@ -81,7 +80,7 @@
         <article class="card">
           <h3>Languages</h3>
           <ul class="list">
-            <li>C++ (C++17)</li>
+            <li>C++ (C++20)</li>
             <li>Python</li>
             <li>C</li>
             <li>JavaScript</li>
@@ -92,7 +91,6 @@
           <h3>Systems & Backend</h3>
           <ul class="list">
             <li>Multithreading & Concurrency</li>
-            <li>Performance Profiling</li>
             <li>Memory Optimization</li>
             <li>Backend Architecture</li>
           </ul>
@@ -104,7 +102,6 @@
             <li>Linux</li>
             <li>Git & GitHub</li>
             <li>CMake</li>
-            <li>Docker</li>
           </ul>
         </article>
       </div>
@@ -132,7 +129,7 @@
             <h3>IRL CROSSING — AI Research Intern</h3>
           </header>
           <ul class="list">
-            <li>Designed multi-agent RL experiments (PyTorch/TensorFlow/OpenAI Gym)</li>
+            <li>Worked with multi-agent RL experiments (PyTorch/TensorFlow/OpenAI Gym)</li>
             <li>Improved policy-gradient reward shaping (up to ~25% cooperative efficiency)</li>
             <li>Worked with robotics + psychology teams</li>
           </ul>
@@ -145,7 +142,6 @@
           <ul class="list">
             <li>Built responsive UI (HTML/CSS/JS/Vue)</li>
             <li>Cross-browser testing and performance improvements</li>
-            <li>Assisted with DB schema design for scalability</li>
           </ul>
         </article>
       </div>
@@ -159,59 +155,29 @@
   </p>
 
   <div class="grid projects-grid">
-    <!-- PONG -->
+    <!-- Build Your Own Lisp (Interpreter) -->
     <article class="card project-card">
       <header class="project-header">
-        <h3>Pong — C++ / Raylib / WebAssembly</h3>
+        <h3>Build Your Own Lisp (Interpreter) | C</h3>
         <div class="chips">
-          <span class="chip">C++20</span>
-          <span class="chip">Raylib</span>
-          <span class="chip">Emscripten</span>
-          <span class="chip">WebAssembly</span>
+          <span class="chip">C</span>
+          <span class="chip">Parsing</span>
+          <span class="chip">REPL</span>
         </div>
       </header>
 
       <p class="muted">
-        Deterministic Pong with a fixed-timestep loop and predictable input handling. Built native-first and deployed to the web via WASM.
+        Built a small Lisp interpreter in C, implementing S-expression parsing, an eval/apply execution model, and a REPL for interactive development.
       </p>
 
       <ul class="list">
-        <li>Implemented real-time loop + collision handling with deterministic behaviour</li>
-        <li>Compiled and deployed to the browser with Emscripten</li>
-        <li>Focused on input latency and consistent physics across frame rates</li>
+        <li>Implemented core language features including lexical scoping with environments</li>
+        <li>Implemented user-defined functions (lambda), and key special forms such as if and define</li>
+        <li>Added error handling, type checking, and a standard library of built-in functions for arithmetic and list processing</li>
       </ul>
 
       <div class="card-actions">
-        <a class="btn btn-sm" href="#demo-pong">Live Demo</a>
-        <a class="btn btn-ghost btn-sm" href="https://github.com/suyash345/Pong-Raylib" target="_blank" rel="noopener noreferrer">
-          GitHub
-        </a>
-      </div>
-    </article>
-
-    <!-- SAND -->
-    <article class="card project-card">
-      <header class="project-header">
-        <h3>Sand Simulation — Python / PyGame</h3>
-        <div class="chips">
-          <span class="chip">Python</span>
-          <span class="chip">PyGame</span>
-          <span class="chip">Simulation</span>
-        </div>
-      </header>
-
-      <p class="muted">
-        Particle-based sandbox simulation with interactive drawing and simple material rules (sand / rock / eraser).
-      </p>
-
-      <ul class="list">
-        <li>Built a grid/particle update loop to simulate granular flow</li>
-        <li>Mouse-driven placement + continuous drawing tools</li>
-        <li>Clear control scheme and stable performance at higher particle counts</li>
-      </ul>
-
-      <div class="card-actions">
-        <a class="btn btn-ghost btn-sm" href="https://github.com/suyash345/REPO_NAME" target="_blank" rel="noopener noreferrer">
+        <a class="btn btn-ghost btn-sm" href="https://github.com/suyash345/BuildYourOwnLisp" target="_blank" rel="noopener noreferrer">
           GitHub
         </a>
       </div>
@@ -222,7 +188,7 @@
       <header class="project-header">
         <h3>Space Invaders — C++ / Raylib / WebAssembly</h3>
         <div class="chips">
-          <span class="chip">C++17</span>
+          <span class="chip">C++20</span>
           <span class="chip">Raylib</span>
           <span class="chip">WASM</span>
         </div>
@@ -245,8 +211,37 @@
         </a>
       </div>
     </article>
+
+    <!-- Distributed Aggregation System -->
+    <article class="card project-card">
+      <header class="project-header">
+        <h3>Distributed Aggregation System (Lamport Clocks)</h3>
+        <div class="chips">
+          <span class="chip">Java</span>
+          <span class="chip">Sockets</span>
+          <span class="chip">Lamport Clocks</span>
+        </div>
+      </header>
+
+      <p class="muted">
+        Distributed aggregation server handling multiple clients with event ordering using Lamport clocks.
+      </p>
+
+      <ul class="list">
+        <li>Server handled multiple content servers + a GET client over TCP sockets</li>
+        <li>Used Lamport clocks to determine consistent ordering of events</li>
+        <li>Implemented protocol responses and logging for debugging and traceability</li>
+      </ul>
+
+      <div class="card-actions">
+        <a class="btn btn-ghost btn-sm" href="https://github.com/suyash345/REPO_NAME" target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
+      </div>
+    </article>
   </div>
 </section>
+
 
 
 
